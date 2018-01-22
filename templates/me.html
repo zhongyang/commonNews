@@ -1,18 +1,25 @@
 <ion-view title="我的" id="me">
-  <ion-content padding="false" class="has-header">
+  <ion-content padding="false" class="has-header me-background-color">
     <div id="page5-container2">
       <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
         <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
       </div>
     </div>
-    <div class="spacer" style="width: 300px; height: 10px;"></div>
-    <ion-list id="page5-list7">
-      <ion-item class="item-icon-left" id="page5-list-item29">
+    <div class="spacer" style="width: 300px; height: 20px;"></div>
+    <ion-list id="page5-list7" class="me-list-bg-color">
+      <ion-item class="item-icon-left me-list-item" id="page5-list-item29">
         <i class="icon ion-ios-chatbubble-outline"></i>我的评论</ion-item>
-      <ion-item class="item-icon-left" id="page5-list-item30" ui-sref="tabsController.information()">
-        <i class="icon ion-ios-contact-outline"></i>我的信息</ion-item>
-      <ion-item class="item-icon-left" id="page5-list-item32" ui-sref="tabsController.settings()">
-        <i class="icon ion-ios-settings"></i>设置</ion-item>
+      <ion-item class="item-icon-left me-list-item item-icon-right"  id="page5-list-item30" ui-sref="tabsController.information()">
+        <i class="icon icon-icon069"></i>
+        我的信息
+        <i class="icon ion-ios-arrow-right me-list-item-right-arrow"></i>
+      </ion-item>
+      <div class="spacer" style="width: 300px; height: 20px;"></div>
+      <ion-item class="item-icon-left me-list-item item-icon-right" id="page5-list-item32" ui-sref="tabsController.settings()">
+        <i class="icon icon-shezhi2"></i>
+        设置
+        <i class="icon ion-ios-arrow-right me-list-item-right-arrow"></i>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
