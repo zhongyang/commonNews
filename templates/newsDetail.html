@@ -1,0 +1,11 @@
+<ion-view title="详情" id="newsDetail" ng-controller="newsDetailCtrl">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+      <label class="title" ng-bind="newsObject.title"></label>
+      <p class="detail-text" ng-bind="newsObject.date"></p>
+      <div class="html-content" ng-bind-html="newsObject.content | trustAsHtml"></div>
+  </ion-content>
+
+</ion-view>

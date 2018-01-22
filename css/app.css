@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.item {
+    margin-left: -5px;
+    margin-right: -5px;
+    border-width: 0px;
+}
+
+.item h2 {
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.item-thumbnail-left, .item-thumbnail-left .item-content {
+    padding-left: 116px;
+}
+
+.item-thumbnail-left > img:first-child {
+    max-width: 100px;
+}
+
+.time-div {
+    padding-top: 22px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detail-text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.html-content img{
+        width:100%;
+        height: 100%;
+}

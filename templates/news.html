@@ -1,0 +1,20 @@
+<ion-view title="要闻" id="news">
+  <ion-content padding="true" class="has-header" ng-controller="newsCtrl">
+    <ion-refresher on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-list id="page2-list4">
+      <ion-item class="item-thumbnail-left" id="page2-list-item20" ng-click="browserItem(item)" ng-repeat="item in newsData">
+        <img src="{{item.thumbnail_images.medium.url}}">
+        <h2>{{item.title}}</h2>
+        <div class="time-div">
+          <label>{{item.date}}</label>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll on-infinite="loadMore()" ng-if="hasMoreData()" distance="1%" immediate-check="false"> 
+    </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>
