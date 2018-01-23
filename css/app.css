@@ -98,3 +98,8 @@
     color: white;
     font-size: 16px;
 }
+
+.infomation-list-item {
+    border-bottom:1px solid #d4dde4;
+    margin: 0px;
+}

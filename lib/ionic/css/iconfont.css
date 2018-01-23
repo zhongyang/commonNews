@@ -22,17 +22,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pinglun3:before { content: "\e600"; }
+
 .icon-icon069:before { content: "\e64f"; }
+
+.icon-icon60setting2x:before { content: "\e604"; }
+
+.icon-unie64d:before { content: "\e6b0"; }
+
+.icon-email:before { content: "\e61b"; }
+
+.icon-xinxi:before { content: "\e649"; }
 
 .icon-fankui:before { content: "\e62b"; }
 
 .icon-guanyu:before { content: "\e639"; }
 
+.icon-yonghu:before { content: "\e636"; }
+
+.icon-morentouxiang:before { content: "\e616"; }
+
 .icon-wodepinglun1:before { content: "\e6b7"; }
 
-.icon-shezhi2:before { content: "\e608"; }
+.icon-shijian:before { content: "\e62a"; }
 
-.icon-qinglihuancun:before { content: "\e675"; }
+.icon-shezhi2:before { content: "\e608"; }
 
 .icon-shishizixun:before { content: "\e699"; }
 
@@ -41,4 +55,3 @@
 .icon-hushenhangqing:before { content: "\e6a8"; }
 
 .icon-licai:before { content: "\e6aa"; }
-
