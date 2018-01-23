@@ -87,24 +87,16 @@ angular.module('app.routes', [])
     controller: 'commentsCtrl'
   })
 
-  .state('tabsController.information', {
+  .state('information', {
     url: '/selfinfo',
-    views: {
-      'tab4': {
-        templateUrl: 'templates/information.html',
-        controller: 'informationCtrl'
-      }
-    }
+    templateUrl: 'templates/information.html',
+    controller: 'informationCtrl'
   })
 
-  .state('tabsController.settings', {
+  .state('settings', {
     url: '/settings',
-    views: {
-      'tab4': {
-        templateUrl: 'templates/settings.html',
-        controller: 'settingsCtrl'
-      }
-    }
+    templateUrl: 'templates/settings.html',
+    controller: 'settingsCtrl'
   })
 
 $urlRouterProvider.otherwise('/tabs/news')

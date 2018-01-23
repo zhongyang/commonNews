@@ -59,6 +59,7 @@
 
 .bar.bar-positive {
     background-color: #333333;
+    background-image: linear-gradient(0deg, #333333, #333333 50%);
 }
 
 .me-list-bg-color {
@@ -75,4 +76,25 @@
 
 .me-background-color {
     background-color: #EBEAF4;
+}
+
+.me-avatar {
+    margin: 0px; 
+    height: 250px;
+    background-color: #333333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.me-avatar-img {
+    width: 80px;
+    height: 80px;
+}
+
+.me-avatar-label {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
 }

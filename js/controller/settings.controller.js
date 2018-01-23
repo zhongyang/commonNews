@@ -5,11 +5,14 @@
         .module('app')
         .controller('settingsCtrl', settingsCtrl);
 
-        settingsCtrl.$inject = ['$scope', '$stateParams'];
+        settingsCtrl.$inject = ['$scope', '$stateParams', '$ionicHistory', '$ionicViewSwitcher'];
 
     /* @ngInject */
-    function settingsCtrl($scope, $stateParams) {
-
+    function settingsCtrl($scope, $stateParams, $ionicHistory, $ionicViewSwitcher) {
+        $scope.goBack = function() {
+            $ionicViewSwitcher.nextDirection('back'); 
+            $ionicHistory.goBack();
+        }
     }
 })();
    

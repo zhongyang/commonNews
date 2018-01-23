@@ -5,10 +5,10 @@
         .module('app')
         .controller('newsCtrl', newsCtrl);
 
-        newsCtrl.$inject = ['$scope', '$stateParams', 'requestWebservice', '$state'];
+        newsCtrl.$inject = ['$scope', '$stateParams', 'requestWebservice', '$state', '$ionicViewSwitcher'];
 
     /* @ngInject */
-    function newsCtrl($scope, $stateParams, requestWebservice, $state) {
+    function newsCtrl($scope, $stateParams, requestWebservice, $state, $ionicViewSwitcher) {
         $scope.canLoadMoreData = false;
         $scope.totolPage = 0;
         $scope.curPage = 0;
@@ -57,6 +57,7 @@
         }
 
         $scope.browserItem = function(item) {
+            $ionicViewSwitcher.nextDirection('forward'); 
             $state.go('newsDetail', { newsObject: item });
         }
     }
