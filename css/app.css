@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.item {
+.news-item {
     margin-left: -5px;
     margin-right: -5px;
     border-width: 0px;
@@ -123,7 +123,6 @@
     font-size: 30px!important;
 }
 
-
 .logout-button {
     position:fixed;
     bottom:5px;
@@ -148,3 +147,19 @@
     width: 30px;
     fill: #fff;
 }
+
+.login-btn {
+    background-color: #2aa515;
+    color: white;
+    left: 1%;
+    right: 1%;
+    width: 98%;
+    height: 46px;
+    border-radius:5px;
+    font-size: 18px;
+}
+
+.forget-password-btn {
+    float: right;
+}
+

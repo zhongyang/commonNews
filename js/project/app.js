@@ -5,12 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.routes', 'app.directives','app.services', 'app.connector'])
+angular.module('app', ['ionic', 'app.routes', 'app.directives','app.services', 'app.connector', 'LocalStorageModule'])
 
-.config(function($ionicConfigProvider, $sceDelegateProvider){
+.config(function($ionicConfigProvider, $sceDelegateProvider, localStorageServiceProvider){
 
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**', 'https://www.givememoney.top']);
   $ionicConfigProvider.tabs.position('bottom');
+  localStorageServiceProvider.setPrefix('commonnews');
 })
 
 .run(function($ionicPlatform) {

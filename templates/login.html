@@ -1,4 +1,7 @@
 <ion-view title="登录" id="login">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
+  </ion-nav-buttons>  
   <ion-content padding="true" class="has-header">
     <form id="page6-form1" class="list">
       <ion-list id="page6-list1">
@@ -12,8 +15,11 @@
         </label>
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>
-      <button id="page6-button1" class="button button-stable button-block">登录</button>
-      <a href-inappbrowser="/signup" id="page6-button2" class="button button-positive button-block button-clear">创建一个账号？</a>
+      <button id="page6-button1" class="login-btn">登录</button>
+      <div>
+          <button id="page6-button2" class="button button-positive button-clear" ng-click="register()">创建一个账号？</button>
+          <button id="page6-button3" class="button button-positive button-clear forget-password-btn" ng-click="forgetPassword()">忘记密码？</button>
+      </div>
     </form>
   </ion-content>
 </ion-view>

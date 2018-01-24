@@ -1,4 +1,7 @@
 <ion-view title="注册" id="register">
+  <ion-nav-buttons side="left" class="has-header hideBackButton ">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
+  </ion-nav-buttons>  
   <ion-content padding="true" class="has-header">
     <form id="page7-form2" class="list">
       <ion-list id="page7-list2">
@@ -15,7 +18,8 @@
           <input type="text" placeholder="">
         </label>
       </ion-list>
-      <button id="page7-button3" class="button button-stable button-block">注册</button>
+      <div class="spacer" style="height: 40px;"></div>
+      <button id="page7-button3" class="login-btn">注册</button>
     </form>
   </ion-content>
 </ion-view>
