@@ -103,3 +103,13 @@
     border-bottom:1px solid #d4dde4;
     margin: 0px;
 }
+
+.infomation-list-item-icon {
+    font-size: 22px!important;
+}
+
+.infomation-list-item-right {
+    float: right;
+    color: #aaa;
+    font-size: 18px;
+}
