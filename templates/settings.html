@@ -3,14 +3,14 @@
       <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <div class="spacer" style="width: 300px; height: 22px;"></div>
     <ion-list id="page12-list13">
-      <ion-item class="item-icon-left" id="page12-list-item52">
-        <i class="icon ion-ios-compose-outline"></i>意见反馈</ion-item>
-      <ion-item class="item-icon-left" id="page12-list-item53">
-        <i class="icon ion-ios-trash-outline"></i>清理缓存</ion-item>
+      <ion-item class="item-icon-left settings-list-item" id="page12-list-item52" ng-click="feedbackAction()">
+        <i class="icon icon-qunfengyijianfankui"></i>意见反馈</ion-item>
+      <ion-item class="item-icon-left settings-list-item" id="page12-list-item53" ng-click="clearAction()">
+        <i class="icon icon-qingchuhuancun"></i>清理缓存</ion-item>
     </ion-list>
     <div class="spacer" style="width: 300px; height: 302px;"></div>
-    <button id="page12-button7" class="button button-assertive button-block">退出登录</button>
-  </ion-content>
+ </ion-content>
+ <button id="page12-button7" class="button button-assertive logout-button" ng-click="logoutAction()">退出登录</button>
+ 
 </ion-view>

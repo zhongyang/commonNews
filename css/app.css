@@ -113,3 +113,34 @@
     color: #aaa;
     font-size: 18px;
 }
+
+.settings-list-item {
+    border-bottom:1px solid #d4dde4;
+    margin: 0px;
+}
+
+.logout-button {
+    position:fixed;
+    bottom:5px;
+
+    left: 2%;
+    right: 2%;
+    width: 96%;
+}
+
+.item-myicon{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.item-myicon ion-spinner {
+    float: left;
+    margin: 0;
+    margin-right: .5em;
+    margin-top: -0.2em;
+}       
+.spinner svg {
+    width: 30px;
+    fill: #fff;
+}
+
