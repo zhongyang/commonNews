@@ -5,10 +5,10 @@
         .module('app')
         .controller('settingsCtrl', settingsCtrl);
 
-        settingsCtrl.$inject = ['$scope', '$stateParams', '$ionicHistory', '$ionicViewSwitcher', '$ionicActionSheet', 'hudService', '$timeout'];
+        settingsCtrl.$inject = ['$scope', '$stateParams', '$ionicHistory', '$ionicViewSwitcher', '$ionicActionSheet', 'hudService', '$timeout', 'userService', '$state'];
 
     /* @ngInject */
-    function settingsCtrl($scope, $stateParams, $ionicHistory, $ionicViewSwitcher, $ionicActionSheet, hudService, $timeout) {
+    function settingsCtrl($scope, $stateParams, $ionicHistory, $ionicViewSwitcher, $ionicActionSheet, hudService, $timeout, userService, $state) {
         $scope.goBack = function() {
             $ionicViewSwitcher.nextDirection('back'); 
             $ionicHistory.goBack();
@@ -21,10 +21,13 @@
                 titleText: "确定退出登录的账号？",
                 cancelText: '取消',
                 cancel: function() {
-                    
+                    return true;
                 },
                 destructiveButtonClicked: function() {
-
+                    userService.userLogout();
+                    $ionicViewSwitcher.nextDirection('back'); 
+                    $state.go("tabsController.news");
+                    return true;
                 },
                 buttonClicked: function(index) {
                   return true;
