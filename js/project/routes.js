@@ -99,6 +99,12 @@ angular.module('app.routes', [])
     controller: 'settingsCtrl'
   })
 
+  .state('about', {
+    url: '/about',
+    templateUrl: 'templates/about.html',
+    controller: 'aboutCtrl'
+  })
+
 $urlRouterProvider.otherwise('/tabs/news')
 
 });

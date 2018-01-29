@@ -46,6 +46,11 @@
         $scope.feedbackAction = function() {
             
         }
+
+        $scope.aboutAction = function() {
+            $ionicViewSwitcher.nextDirection('forward'); 
+            $state.go('about');
+        }
     }
 })();
    
