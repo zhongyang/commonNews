@@ -1,4 +1,4 @@
-<ion-view title="找回密码" id="findPwd">
+<ion-view title="找回密码" id="findPwd" ng-controller="findPwdCtrl as fpCtrl">
   <ion-nav-buttons side="left" class="has-header">
     <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
   </ion-nav-buttons> 
@@ -6,12 +6,12 @@
     <form id="page8-form3" class="list">
       <ion-list id="page8-list3">
         <label class="item item-input" id="page8-input6">
-          <span class="input-label">邮箱</span>
-          <input type="email" placeholder="请输入注册邮箱">
+          <span class="input-label">用户名</span>
+          <input type="text" placeholder="请输入用户名" ng-model="fpCtrl.username">
         </label>
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>
-      <button id="page8-button4" class="login-btn">找回密码</button>
+      <button id="page8-button4" class="login-btn" ng-click="findPassword()">找回密码</button>
     </form>
   </ion-content>
 </ion-view>

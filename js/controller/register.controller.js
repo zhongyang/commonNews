@@ -5,14 +5,14 @@
         .module('app')
         .controller('registerCtrl', registerCtrl);
 
-        registerCtrl.$inject = ['$scope', '$stateParams', '$ionicHistory', '$ionicViewSwitcher', 'hudService', 'requestWebservice', '$q', 'userService', '$ionicViewSwitcher'];
+        registerCtrl.$inject = ['$scope', '$stateParams', '$ionicHistory', '$ionicViewSwitcher', 'hudService', 'requestWebservice', '$q', 'userService'];
 
     /* @ngInject */
-    function registerCtrl($scope, $stateParams, $ionicHistory, $ionicViewSwitcher, hudService, requestWebservice, $q, userService, $ionicViewSwitcher) {
+    function registerCtrl($scope, $stateParams, $ionicHistory, $ionicViewSwitcher, hudService, requestWebservice, $q, userService) {
         var vm = this;
-        vm.username = "1s1cxiha1234";
-        vm.email = "a1cxsiaha1234@123.com";
-        vm.password = "c1sa1234564";
+        vm.username = "";
+        vm.email = "";
+        vm.password = "";
         vm.nonce = "";
 
         $scope.goBack = function() {

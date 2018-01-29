@@ -13,7 +13,8 @@
             getNews: getNews,
             login: login, 
             register: register,
-            get_nonce: get_nonce
+            get_nonce: get_nonce,
+            findpassword: findpassword
         };
         return service;
 
@@ -41,6 +42,12 @@
             var headers = new Headers();
             headers.append('content-type','application/json');
             return httpRequest.Request("Get", "?json=user/register&username=" + username + "&user_pass=" + password + "&display_name=" + username + "&email=" + email + "&nonce=" + nonce, {}, headers)                   
+        }
+
+        function findpassword(username) {
+            var headers = new Headers();
+            headers.append('content-type','application/json');
+            return httpRequest.Request("Get", "?json=user/retrieve_password&user_login=" + username, {}, headers)                      
         }
     }
 })();
