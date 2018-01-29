@@ -9,10 +9,20 @@
 
     /* @ngInject */
     function meCtrl($scope, $stateParams, $state, $ionicViewSwitcher, userService, hudService) {
+        var vm = this;
+        vm.username = "";
+
         activate();
         
         function activate() {
-            if(!userService.isLogined()) {
+            $scope.$on("$ionicView.beforeEnter", willEnter);
+        }
+
+        function willEnter() {
+            if(userService.isLogined()) {
+                vm.username = userService.getUser().user.displayname;
+            } else {
+                vm.username = "未登录";
             }
         }
 

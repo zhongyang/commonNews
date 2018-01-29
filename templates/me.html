@@ -1,9 +1,9 @@
-<ion-view title="我的" id="me">
+<ion-view title="我的" id="me" ng-controller="meCtrl as mCtrl">
   <ion-content padding="false" class="has-header me-background-color">
     <div id="page5-container2">
       <div class="me-avatar">
         <img class="me-avatar-img" src="../img/avatar.png"></img>
-        <label class="me-avatar-label">未登录</label>
+        <label class="me-avatar-label">{{mCtrl.username}}</label>
       </div>
       
     </div>

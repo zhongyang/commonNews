@@ -11,7 +11,7 @@
     function loginCtrl($scope, $stateParams, $ionicViewSwitcher, $ionicHistory, $state, hudService, requestWebservice, userService) {
         var vm=this;
         vm.username = "zhongyang";
-        vm.password = "helloworld123";
+        vm.password = "helloworld123!";
 
         $scope.goBack = function() {
             $ionicViewSwitcher.nextDirection('back'); 
