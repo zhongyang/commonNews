@@ -1,4 +1,4 @@
-<ion-view title="注册" id="register">
+<ion-view title="注册" id="register" ng-controller="registerCtrl as rgCtrl">
   <ion-nav-buttons side="left" class="has-header hideBackButton ">
     <button class="button button-icon icon ion-ios-arrow-left" ng-click="goBack()"></button>
   </ion-nav-buttons>  
@@ -7,19 +7,19 @@
       <ion-list id="page7-list2">
         <label class="item item-input" id="page7-input3">
           <span class="input-label">用户名</span>
-          <input type="text" placeholder="请输入用户名">
+          <input type="text" placeholder="请输入用户名" ng-model="rgCtrl.username">
         </label>
         <label class="item item-input" id="page7-input4">
           <span class="input-label">邮箱</span>
-          <input type="email" placeholder="请输入邮箱">
+          <input type="email" placeholder="请输入邮箱" ng-model="rgCtrl.email">
         </label>
         <label class="item item-input" id="page7-input5">
           <span class="input-label">密码</span>
-          <input type="text" placeholder="请输入密码">
+          <input type="text" placeholder="请输入密码" ng-model="rgCtrl.password">
         </label>
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>
-      <button id="page7-button3" class="login-btn">注册</button>
+      <button id="page7-button3" class="login-btn" ng-click="register()">注册</button>
     </form>
   </ion-content>
 </ion-view>

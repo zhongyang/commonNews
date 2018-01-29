@@ -41,7 +41,7 @@ angular.module("app.connector", [])
                 }).error(function(data, status, headers, config) {
                     console.log("rest response error data<<<==============================:" + JSON.stringify(data));
                     $log.error("Error: ", headers);
-                    d.reject({ displayedMessage: "与服务器连接失败！" });
+                    d.reject(data);
                 });
                 return d.promise;
             }

@@ -11,11 +11,19 @@
     function requestWebservice(httpRequest, $q) {
         var service = {
             getNews: getNews,
-            login: login
+            login: login, 
+            register: register,
+            get_nonce: get_nonce
         };
         return service;
 
         ////////////////
+
+        function get_nonce(controller, method) {
+            var headers = new Headers();
+            headers.append('content-type','application/json');
+            return httpRequest.Request("Get", "?json=get_nonce&controller=" + controller + "&method=" + method, {}, headers);
+        }
 
         function getNews(pageID) {
             var headers = new Headers();
@@ -27,6 +35,12 @@
             var headers = new Headers();
             headers.append('content-type','application/json');
             return httpRequest.Request("Get", "?json=user/generate_auth_cookie&username=" + username + "&password=" + password, {}, headers)
+        }
+
+        function register(username, email, password, nonce) {
+            var headers = new Headers();
+            headers.append('content-type','application/json');
+            return httpRequest.Request("Get", "?json=user/register&username=" + username + "&user_pass=" + password + "&display_name=" + username + "&email=" + email + "&nonce=" + nonce, {}, headers)                   
         }
     }
 })();

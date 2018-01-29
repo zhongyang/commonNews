@@ -1,6 +1,3 @@
-/**
- * Created by zousheng on 16/5/19.
- */
 (function () {
     'use strict';
 
